@@ -1,0 +1,345 @@
+/*   
+Theme Name: Nghe nhạc trực tuyến
+Theme URI: http://worpress.org
+Description: Hướng dẫn làm website nghe nhạc trực tuyến đơn giản
+Author: DuongDV
+Author URI: http://worpress.org
+Version: 1
+*/
+html{margin:0;padding:0;border:0;}
+body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, dialog, figure, footer, header, hgroup, nav, section{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1; font-family: Arial, Helvetica, sans-serif;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a {
+	text-decoration: none;
+	color: #2882bc;
+}
+a:hover{
+	color:#e74c3c;
+}
+.clear{clear: both;}
+.header-top{
+	background: #f9f9f9;
+	height:60px;
+	width:100%;
+	padding:0;
+}
+.wrap{
+	width:960px;
+	margin:0 auto;
+}
+.header-top .logo{
+	position: relative;
+	float: left;
+	width: 83px;
+	height: 44px;
+	background: url(images/logo.png) left top no-repeat;
+	text-indent: -10000px;
+	display: block;
+	margin-top: 8px;
+	margin-right: 110px;
+}
+.header-top #search-form #s{
+	width: 450px;
+	float: left;
+	height: 27px;
+	line-height: 27px;
+	font-size: 13px;
+	padding: 5px;
+	border: 1px solid #cecece;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+.header-top #search-form #search-sb{
+	background: url(images/searchicon.png) 10px 3px no-repeat;
+	cursor: pointer;
+	float: left;
+	height: 40px; line-height: 40px;
+	width: 56px;
+	border: 1px solid #cecece;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	margin-left: 5px;
+}
+.header-top #search-form #search-sb:hover{
+	background: #cecece url(images/searchicon.png) 10px 3px no-repeat;
+}
+.header-top #search-form{
+	padding-top: 10px;
+}
+.login-box{
+	float:right; margin-top: 13px;
+}
+.login-box a{
+	font-weight: bold; font-size: .8em;
+}
+.header-menu{
+	width:100%; min-width: 1000px; background: #424242;
+}
+#h-menu {
+  font-family: Arial, Sans-Serif;
+  font-size: 10px;
+  line-height: 15px;
+  text-transform: uppercase;
+  text-align: left;
+}
+#h-menu > ul {
+  width: auto;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+}
+#h-menu > ul li {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+}
+#h-menu > ul li.right {
+  float: right;
+}
+#h-menu > ul li.menu-item-has-children {
+  position: relative;
+}
+#h-menu > ul li.menu-item-has-children:hover ul {
+  display: block; z-index: 999999;
+}
+#h-menu > ul li.menu-item-has-children ul {
+  display: none;
+  width: 250px;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  background: #424242;
+  border: 1px solid #fffafc;
+  border-bottom: 3px solid #d9ced2;
+  border-top: 0 none;
+}
+#h-menu > ul li.menu-item-has-children ul li {
+  display: block;
+}
+#h-menu > ul li.menu-item-has-children > a {
+  background-image: url('images/caret.png');
+  background-repeat: no-repeat;
+  background-position: 90% -95%;
+}
+#h-menu > ul li.menu-item-has-children.current_page_item > a,
+#h-menu > ul li.menu-item-has-children > a:hover {
+  background: #1ABC9C url('images/caret.png') no-repeat;
+  background-position: 90% 195%;
+}
+#h-menu > ul li a {
+  display: block;
+  padding: 12px 24px 11px 24px;
+  text-decoration: none;
+  color: #ffffff;
+}
+#h-menu > ul li.current_page_item a,
+#h-menu > ul li a:hover {
+  background: #1ABC9C;
+  color: #fff;
+  text-shadow: 0px 1px 0px #000;
+}
+
+.content-wrap{
+	margin-top: 10px;
+}
+.content{
+	width:640px;
+	float:left;
+}
+.content .ctitle{
+	padding: 10px 0; 
+	border-bottom: 1px solid #1ABC9C; 
+	font-weight: bold; 
+	text-transform: capitalize;
+	margin-bottom: 20px;
+}
+.sidebar{
+	width:300px; 
+	float:right;
+}
+.sbox{
+	width:300px; padding:10px 0;
+}
+.widget ul{
+	margin:5px 0;
+}
+.widget ul a{font-size: .9em;}
+.sbox .stitle, .widget h3{
+	padding:10px 5px;
+	background: #1ABC9C;
+	text-transform: capitalize; color:#fff; font-weight: bold;
+}
+.slst li{
+	margin:10px 0;
+	width:300px; overflow: hidden; 
+}
+.slst li a:first-child{
+	font-size: 12px; 
+	display: block; 
+	color:#64B4EE; 
+	font-weight: bold; 
+	line-height: 16px;
+}
+.slst li a:hover{
+	color:#e74c3c;;
+}
+.slst .info-music{
+	width:200px; float:left;
+}
+.slst .sview{
+	float:right; 
+	font-size: 11px; 
+	color:#999;
+	background: url(images/spider-icon.png) 0 -1px no-repeat;
+	padding-left: 15px;
+}
+
+.mlst li{
+	width: 640px;
+	float: left;
+	margin-right: 20px;
+	border-bottom: #ececec solid 1px;
+	padding: 8px 0px;
+	line-height: 24px;
+}
+.mlst .info-song{
+	float: left;
+	width: 380px;
+	font-size: 12px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.mlst .view{
+	float:right; 
+	font-size: 11px; 
+	color:#999;
+	background: url(images/spider-icon.png) 0 5px no-repeat;
+	padding-left: 15px;
+}
+.mlst .info-song h3{
+	float:left;
+}
+.mlst .info-song span{
+	float: left;
+	padding: 0px 5px;
+	color: #666;
+	font-size: 12px;
+}
+.mlst .info-song p{
+	float: left;
+	max-width: 140px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.mlst_more{
+	float:right; 
+	display: inline-block;
+	font-size: .9em;
+	margin-top: 10px;
+}
+
+.footer{
+	width:100%; 
+	min-width: 1000px;  
+	background: #f9f9f9; 
+	padding:10px 0;
+	min-height: 50px; 
+	line-height: 50px;
+	text-align: center; font-size: .9em; 
+}
+.tabs{
+	margin:5px 0;
+}
+.tabs li{
+	display: inline-block;
+	border:1px solid #e5e5e5; 
+}
+.tabs li.active, .tabs li:hover{border: #333333 solid 1px} 
+}
+.tabs li.active a, .tabs li:hover a{
+	color:#fff;
+}
+.tabs li a{
+	text-transform: uppercase; font-size: .9em;
+	padding:3px 29px;
+	display: inline-block;
+}
+.slst{
+	display: none;
+}
+#week{
+	display: block;
+}
+.slst .singers a{
+	color: #666 !important; display: inline-block !important; font-size: .8em; font-weight: normal !important;
+}
+.links_lst{
+	margin:10px 0;
+}
+.links_lst a{
+	display: inline-block;
+	padding:5px 10px;
+	color:#fff;
+	background: #2882C1; 
+}
+.links_lst a:hover, .links_lst a.ac{
+	background: #1ABC9C;
+}
+.song_info{
+	line-height: 1.5em; font-size: .9em; 
+}
+.song_info h2{
+	font-weight: bold; padding-bottom: 5px; border-bottom: 1px solid #FE8F01; margin-bottom: 10px;
+}
+.song_info #lyric{
+	height:210px; overflow: hidden; background: #F9F9F9; padding:3px; margin:5px 0;
+}
+.song_info .full_height{height:100% !important;}
+
+#pagination{
+    font-size: .9em; 
+    margin: 10px 0;
+}
+#pagination a, #pagination .current_page{
+    display: inline-block;
+    padding:5px;
+    text-decoration: none;
+    border: 1px solid #cecece;
+    margin: 0 3px; color: #2086F6;
+}
+#pagination a:hover{
+    background: #1ABC9C; color: white;
+}
+#pagination .current_page{
+    border: 1px solid #1ABC9C;
+}
